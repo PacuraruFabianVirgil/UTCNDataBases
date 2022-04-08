@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<a href="stud_json2.html">See the student data</a>
+
+	<script>
+		var myObj = {"students": [
+		{"Stud_Id":"1","Name":"Vasile","Surname":"Ion","Gender":"M"},
+		{"Stud_Id":"2","Name":"Georgescu","Surname":"Mihai","Gender":"M"},
+		{"Stud_Id":"3","Name":"Dumitrescu","Surname":"Ioana","Gender":"F"},
+		{"Stud_Id":"4","Name":"Popescu","Surname":"Ana","Gender":"F"},
+		{"Stud_Id":"5","Name":"Marinescu","Surname":"Marcel","Gender":"M"}
+		]} ;
+
+		var myJSON = JSON.stringify(myObj);
+		localStorage.setItem("testJSON", myJSON);
+	</script>
+	
+</body>
+</html>

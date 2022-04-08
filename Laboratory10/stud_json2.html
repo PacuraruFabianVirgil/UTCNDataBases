@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<p id = "json"></p> 
+
+	<script>
+		var str = localStorage.getItem("testJSON");
+		var obj = JSON.parse(str);
+
+		var studentsTable = '<table> <tr><th>Stud_Id</th><th>Name</th><th>Surname</th><th>Gender</th></tr>';
+
+		for (var i = 0; i < obj.students.length; i++) {
+			var student = '<tr>';
+			student = student + '<td>' + obj.students[i]["Stud_Id"] + '</td>';
+			student = student + '<td>' + obj.students[i]["Name"] + '</td>';
+			student = student + '<td>' + obj.students[i]["Surname"] + '</td>';
+			student = student + '<td>' + obj.students[i]["Gender"] + '</td>';
+			student = student + '</tr>';
+			studentsTable += student;
+		}
+
+		studentsTable += '</table>';
+
+		document.getElementById("json").innerHTML = studentsTable;
+	</script>
+
+</body>
+</html>
